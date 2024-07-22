@@ -1,0 +1,33 @@
+What is React?
+--React is a JavaScript library created by Facebook
+--React is a User Interface (UI) library
+--React is a tool for building UI components
+
+Adding React to an HTML Page:
+
+Example
+    <!DOCTYPE html>
+    <html lang="en">
+    <title>Test React</title>
+
+    <!-- Load React API -->
+    <script src= "https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <!-- Load React DOM-->
+    <script src= "https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <!-- Load Babel Compiler -->
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+
+    <body>
+
+    <script type="text/babel">
+        //  JSX Babel code goes here
+    </script>
+
+    </body>
+    </html>
+
+What is Babel?
+--Babel is a JavaScript compiler that can translate markup or programming languages into JavaScript.
+--With Babel, you can use the newest features of JavaScript (ES6 - ECMAScript 2015).
+--Babel is available for different conversions. React uses Babel to convert JSX into JavaScript.
+--Please note that <script type="text/babel"> is needed for using Babel.

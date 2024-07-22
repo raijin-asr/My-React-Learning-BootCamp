@@ -1,0 +1,98 @@
+JSX:---------
+--JSX stands for JavaScript XML.
+--JSX is an XML-like extension to the JavaScript language syntax. Initially created by Facebook for use with React, JSX has been adopted by multiple web frameworks.
+--JSX is not JavaScript nor HTML.
+--JSX is a XML syntax extension to JavaScript that also comes with the full power of ES6 (ECMAScript 2015).
+--Just like HTML, JSX tags can have a tag names, attributes, and children. If an attribute is wrapped in curly braces, the value is a JavaScript expression.
+
+--variable declaration:
+    const element = <h1>Hello, world!</h1>;
+
+--React doesn’t require using JSX, but most people find it helpful as a visual aid when working with UI inside the JavaScript code. It also allows React to show more useful error and warning messages
+
+--Embedding Expressions in JSX:
+    const name = 'Ameer Rai';
+    const element = <h1>Hello, {name}</h1>;
+
+--Embedding function:
+    function fullName(user) {
+    return user.firstName + ' ' + user.lastName;
+    }
+
+    const user = {
+    firstName: 'Ameer',
+    lastName: 'Rai'
+    };
+
+    const element = (
+    <h1>
+        Hello, {fullName(user)}!
+    </h1>
+    );
+
+--JSX is an Expression Too
+--After compilation, JSX expressions become regular JavaScript function calls and evaluate to JavaScript objects.
+--This means that you can use JSX inside of if statements and for loops, assign it to variables, accept it as arguments, and return it from functions:
+
+    function getGreeting(user) {
+    if (user) {
+        return <h1>Hello, {fullName(user)}!</h1>;
+    }
+    return <h1>Hello, Ameer.</h1>;
+    }
+
+--Specifying Attributes with JSX:
+--You may use quotes to specify string literals as attributes:
+    const element = <a href="https://www.reactjs.org"> link </a>;
+
+--You may also use curly braces to embed a JavaScript expression in an attribute:
+    const element = <img src={user.avatarUrl}></img>;
+
+--JSX tags may contain children:
+
+    const element = (
+    <div>
+        <h1>Hello!</h1>
+        <h2>Good to see you here.</h2>
+    </div>
+    );
+
+--JSX Prevents Injection Attacks
+==It is safe to embed user input in JSX:
+
+    const title = response.potentiallyMaliciousInput;
+    // This is safe:
+    const element = <h1>{title}</h1>;
+
+--JSX Represents Objects
+--Babel compiles JSX down to React.createElement() calls.
+--These two examples are identical:
+
+    const element = (
+    <h1 className="greeting">
+        Hello, world!
+    </h1>
+    );
+
+    const element = React.createElement(
+    'h1',
+    {className: 'greeting'},
+    'Hello, world!'
+    );
+
+    //practice:
+    function sum(x,y) {
+    return x+y;
+    }
+
+    let x= 1
+    let y= 2
+
+    const element = (
+    <h1>
+        Output= {sum(x,y)}
+    </h1>
+    );
+
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(<h1>{element}</h1>);

@@ -2,7 +2,7 @@
 import './App.css';
 
 let name="Ameer";
-function App() {
+function Practice1() {
   return (
     //JSX code
     <>
@@ -22,4 +22,4 @@ function App() {
   );
 }
 
-export default App;
+export default Practice1;
