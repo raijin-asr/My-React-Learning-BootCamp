@@ -4,7 +4,7 @@ import './App.css';
 let name="Ameer";
 function Practice1() {
   return (
-    //JSX code
+    //JSX code: Day1,2
     <>
     <nav>
       <ul>
