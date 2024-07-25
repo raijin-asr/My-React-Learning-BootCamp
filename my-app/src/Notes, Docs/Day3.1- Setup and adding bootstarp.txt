@@ -1,5 +1,6 @@
 Just add Bootstrap CDN
-
+(camelCase)
 --replace class with className
 --put / in <img>, <hr> tag
 --replace # with / in href
+--for with htmlFor
