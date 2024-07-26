@@ -6,4 +6,6 @@ React Learning Journey from Basic to Advanced(plus Revisions)
     Day2: JSX, personal practice and docs folder setup
     Day3: render elements and add bootstrap
     Day4: Components, props and propTypes
+    Day5: Class, State and LifeCycle
+    Day6: Function Based Hooks(useState, useEffect, custom Hook)
 
