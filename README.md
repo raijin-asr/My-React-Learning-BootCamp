@@ -8,5 +8,6 @@ React Learning Journey from Basic to Advanced(plus Revisions)
     Day4: Components, props and propTypes
     Day5: Class, State and LifeCycle
     Day6: Function Based Hooks(useState, useEffect, custom Hook)
-    Day7: (WordCounter Mini Project) Implemented useState, dark mode feature, copy text, remove extra space
+    Day7: (WordCounter Mini Project) Implemented useState, dark mode, copy text, remove extra space feature
+    Day8: Implementing, improving Darkmode in Nav, Body, and whole word counter form
 

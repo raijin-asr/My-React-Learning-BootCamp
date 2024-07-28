@@ -75,13 +75,15 @@ export default function Form(props) {
   return (
     <>
       <div className='container' style={myStyle1}>
+
+      {/* if pass mode from A[p.js 
+      <div className='container' style={{color:props.mode==='dark'?'white':'black', backgroundColor:props.mode==='dark'?'white':'black'}}> */}
           <div className="mb-3">
             <h1>{props.heading}</h1>
             <button type="submit" className="btn btn-primary mx-2" onClick={toggleDark}>{btnText}</button>
           </div>
           <div class="mb-3">
               <label htmlFor="label1" class="form-label">Enter words, sentence:</label>
-              {/* <label htmlFor="label1" class="form-label">{text}</label> */}
               <textarea class="form-control" id="input1" value={text} placeholder={placeholder} onChange={handleOnChange} rows="6"></textarea>
           </div>
           <div class="pb-3">
@@ -92,12 +94,12 @@ export default function Form(props) {
             <button type="submit" className="btn btn-success mx-2" onClick={removeExtraSpace}>Remove Extra Space</button>
           </div>
       </div>
-      <div className="container" my-4>
+      <div className={`container text-${props.mode==='light'?'dark':'light'} my-4`}>
         <h1>Your Data Summary:</h1>
         <p>{text.trim()? text.split(" ").length: 0} words & {text.trim()? text.length:0} characters</p>
         <p>Took {text.trim() ? (text.split(" ").length * 0.008).toFixed(2) : 0} minutes to read</p>
         <h2>Preview</h2>
-        <p>{text}</p>
+        <p>{text.length<0?"Enter some text above to preview here":text}</p>
       </div>
     </>
   )
