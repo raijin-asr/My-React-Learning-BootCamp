@@ -33,12 +33,14 @@ export default function Form(props) {
     let text = document.getElementById("input1");
     text.select();
     navigator.clipboard.writeText(text.value);
+    props.showAlert("Text Copied to Clipboard!","success"); //to change the value of text
   }
 
   //removing extra spaces from the textarea
   const removeExtraSpace = () => {
     let newText = text.split(/[ ]+/); //regex to remove extra spaces
     setText(newText.join(" ")); //to change the value of text by join removed spaced text
+    props.showAlert("Extra Spaces removed!","success"); //to change the value of text
   }
 
   const [text, setText] = useState(" "); //array destructuring
@@ -50,19 +52,21 @@ export default function Form(props) {
   const toUpperCase = () => {
     let newText = text.toUpperCase();
     setText(newText); //to change the value of text
-
+    props.showAlert("Text converted to Uppercase","success"); //to change the value of text
     // setText("State changed, and button clicked"); //to change the value of text
   }
 
   const toLowerCase = () => {
     let newText = text.toLowerCase();
     setText(newText); //to change the value of text
+    props.showAlert("Text converted to Lowercase","success"); //to change the value of text
   }
 
   const handleReset = () => {
     let newText = " ";
     {text === " " ? setText("Enter Text") : setText(newText)}
     setText(newText); //to change the value of text
+    props.showAlert("Text Reset","success"); //to change the value of text
   }
 
   //onchange event lets us type in the textarea, else we cant type
